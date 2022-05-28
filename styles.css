@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.8;
+    color: #555;
+    background-color: coral;
+}
+
+.overall {
+    height: 80vh;
+    max-width: 100rem;
+    margin: 4rem auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    padding: 2rem 2.5rem;
+}
+
+.box {
+    border: 2px solid orangered;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.active {
+    animation-name: blink;
+    animation-duration: 1s;
+}
+
+@keyframes blink {
+    0% {background-color: #444;}
+    100% {background-color: coral;}
+  }
