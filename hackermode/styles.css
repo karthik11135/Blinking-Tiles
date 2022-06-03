@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  line-height: 1.8;
+  color: #555;
+  background-color: coral;
+  overflow: auto;
+}
+
+.timer {
+  max-width: 100rem;
+  text-align: center;
+  box-shadow: 2px 3px 4px 2px rgba(0,0,0,0.05);
+  margin: 1.2rem auto;
+  border-radius: 7px;
+  font-size: 3.2rem;
+  color: rgb(122, 103, 145);
+  font-family: "Courier New", Courier, monospace;
+}
+
+.overall {
+  height: 80vh;
+  max-width: 100rem;
+  margin: 1.2rem auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2rem;
+  padding: 2rem 2.5rem;
+}
+
+.box {
+  border: 2px solid orangered;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.score-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -54%);
+  max-height: 50rem;
+  max-width: 60rem;
+  background-color: rgb(241, 193, 114);
+  display: flex;
+  justify-content: start;
+  padding: 1rem;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+  border-radius: 7px;
+  z-index: 2;
+  border: 2px solid orangered;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  background-color: rgb(174, 173, 173);
+  opacity: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.score-card-details {
+  height: 37rem;
+  overflow: scroll;
+  overflow-x: hidden;
+  /* border: 2px solid paleturquoise */
+}
+
+.score-card-details::-webkit-scrollbar {
+  display: none;
+}
+
+.scord-card-detail {
+  margin: 0.8rem;
+  font-size: 1.8rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 3px 2px rgba(0,0,0,0.04);
+  padding: 1rem;
+}
+
+.score-card h1 {
+  margin-left: 0.9rem;
+  font-size: 3.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.score-card p {
+  font-weight: 400;
+  font-size: 3rem;
+}
+
+.active {
+  animation-name: blink;
+  animation-duration: 1s;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #444;
+  }
+  100% {
+    background-color: coral;
+  }
+}
